@@ -30,4 +30,6 @@ ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
 ces_graph
 ```
 
- 
+Overall, the trend of these data show that the areas that have lower percentages of white occupants also have a lower CES 3.0 score, which means they have lower pollution burdens than non-whites. 
+
+Citation: Eng, Tiffany. (January 2017). *CalEnviroScreen 3.0* [Infographic]. https://caleja.org/wp-content/uploads/2015/09/CES3.0-5.pdf
