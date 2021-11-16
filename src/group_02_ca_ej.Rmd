@@ -12,6 +12,8 @@ library(janitor)
 library(here)
 ```
 
+###Part A. Partner 1 | Data input
+
 ```{r}
 ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
   clean_names()
@@ -21,6 +23,8 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 
 ```{r}
 ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
-  geom_point()
+  geom_hex() +
+  labs(x = "% white population", y = "CES 3.0 score")
+ces_graph
 ```
 
