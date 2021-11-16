@@ -17,3 +17,10 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
   clean_names()
 ```
 
+###Part B. Partner 2 | Initial graph creation. 
+
+```{r}
+ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
+  geom_point()
+```
+
