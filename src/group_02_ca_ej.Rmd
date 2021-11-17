@@ -5,8 +5,8 @@ date: "11/14/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(janitor)
 library(here)
@@ -29,7 +29,8 @@ ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
   labs(x = "% white population", y = "CES 3.0 score")
 ces_graph
 ```
+**Figure 1.** California census tracts with large white populations tend to have lower CES 3.0 scores. Darker color represents greater density of tracts.
 
-Overall, the trend of these data show that the areas that have lower percentages of white occupants also have a lower CES 3.0 score, which means they have lower pollution burdens than non-whites. 
+Overall, the trend of these data show that the areas that have higher percentages of white occupants have a lower CES 3.0 score, which means they have lower pollution burdens than non-white areas.
 
 Citation: Eng, Tiffany. (January 2017). *CalEnviroScreen 3.0* [Infographic]. https://caleja.org/wp-content/uploads/2015/09/CES3.0-5.pdf
