@@ -12,14 +12,12 @@ library(janitor)
 library(here)
 ```
 
-###Part A. Partner 1 | Data input
 
 ```{r}
 ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
   clean_names()
 ```
 
-###Part B. Partner 2 | Initial graph creation. 
 
 ```{r}
 ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
@@ -29,6 +27,7 @@ ces_graph <- ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
   labs(x = "% white population", y = "CES 3.0 score")
 ces_graph
 ```
+
 **Figure 1.** California census tracts with large white populations tend to have lower CES 3.0 scores. Darker color represents greater density of tracts.
 
 Overall, the trend of these data show that the areas that have higher percentages of white occupants have a lower CES 3.0 score, which means they have lower pollution burdens than non-white areas.
